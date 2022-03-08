@@ -18,4 +18,6 @@ public abstract class Orchestrator {
         this.dataReader = dataReader;
     }
 
+    public abstract void run() throws Exception;
+
 }

@@ -18,5 +18,10 @@ public class Main {
         String collection = "employees";
         Orchestrator orchestrator = new SqlOrchestrator( collectionCreator,  connectionCloser,  connectionOpener,  dataInsert,  dataReader,
                  connection,  collection);
+        try {
+            orchestrator.run();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
