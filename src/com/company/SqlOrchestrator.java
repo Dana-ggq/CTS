@@ -12,11 +12,11 @@ public class SqlOrchestrator extends Orchestrator{
     private DataInsert dataInsert;
     private DataReader dataReader;
 
-    private Connection connection;
+    private String connection;
     private String collection;
 
     public SqlOrchestrator(CollectionCreator collectionCreator, ConnectionCloser connectionCloser, ConnectionOpener connectionOpener, DataInsert dataInsert, DataReader dataReader,
-                           Connection connection, String collection) {
+                           String connection, String collection) {
         super(collectionCreator, connectionCloser, connectionOpener, dataInsert, dataReader);
         this.collectionCreator = collectionCreator;
         this.connectionCloser = connectionCloser;
